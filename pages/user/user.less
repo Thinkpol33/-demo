@@ -1,0 +1,123 @@
+page {
+  background-color: #eee;
+}
+
+.user_info_wrap {
+  width: 100vw;
+  height: 45vh;
+  // background-color: var(--themeColor);
+
+  .user_img_wrap {
+    height: 100%;
+    position: relative;
+
+    .user_bg {
+      height: 100%;
+      //css3滤镜
+      filter: blur(10px);
+    }
+
+    .user_info {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translateX(-50%);
+      text-align: center;
+
+      .user_icon {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      .user_name {
+        margin-top: 20rpx;
+        font-weight: 600;
+        font-size: 36rpx;
+      }
+    }
+  }
+
+  .login_btn {
+    width: 100vw;
+    text-align: center;
+    padding-top: 20vh;
+
+    navigator {
+      border: cyan 1rpx solid;
+      width: 40rpx;
+      height: 30rpx;
+    }
+  }
+}
+
+.user_content {
+  position: relative;
+  color: #666;
+}
+
+.user_main {
+  position: relative;
+  position: absolute;
+  width: 90%;
+  top: -40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 100rpx;
+
+  .user_history {
+    display: flex;
+    background-color: #fff;
+
+
+    navigator {
+      flex: 1;
+      text-align: center;
+      padding: 10rpx 0;
+
+    }
+  }
+
+  .orders {
+    background-color: #fff;
+    margin-top: 30rpx;
+    width: 100%;
+
+    .orders_title {
+      padding: 20rpx;
+      border-bottom: 1rpx solid #ccc;
+    }
+
+    .order_content {
+      display: flex;
+
+      navigator {
+        padding: 15rpx 0;
+        flex: 1;
+        text-align: center;
+        font-size: 24rpx;
+      }
+    }
+  }
+
+  .address {
+    margin-top: 30rpx;
+    padding: 20rpx;
+    background-color: #fff;
+  }
+
+  .app_info {
+    margin-top: 30rpx;
+
+    background-color: #fff;
+  }
+
+  .app_info_item {
+    padding: 20rpx;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,37 @@
+<view class="detail_swiper">
+  <swiper autoplay circular indicator-dots>
+    <swiper-item data-url="{{item.pics_mid}}" bindtap="previewImage" wx:for="{{goodsData.pics}}" wx:key="pics_id">
+      <image src="{{item.pics_mid}}" mode="widthFix" />
+    </swiper-item>
+  </swiper>
+</view>
+<view class="goods_price">￥{{goodsData.goods_price}}</view>
+<view class="goods_name">
+  <view class="goods_name_left">{{goodsData.goods_name}}</view>
+  <view class="goods_name_right" bindtap="handleCollect">
+    <view class="iconfont {{isCollect?'icon-collection-b':'icon-shoucang'}}"></view>
+    <view>收藏</view>
+  </view>
+</view>
+<view class="goods_info">
+  <view class="goods_info_title">商品详情</view>
+  <rich-text class="" nodes="{{goodsData.goods_introduce}}"></rich-text>
+</view>
+<view class="btm">
+  <view class="btm_item">
+    <view class="iconfont icon-kefu"></view>
+    <view>客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="btm_item">
+    <view class="iconfont icon-fenxiang"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <navigator url="/pages/cart/cart" open-type="switchTab" class="btm_item">
+    <view class="iconfont icon-gouwuche"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="btm_item btn_cart" bindtap="addCart">加入购物车</view>
+  <view class="btm_item btn_buy">立即购买</view>
+</view>
